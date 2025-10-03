@@ -9,61 +9,67 @@ const AppContextProvider = (props) => {
                 _id: '0001',
                 image: doc  ,
                 name: 'Jennifer Williams',
-                speciality: 'Orthopedics',
+                speciality: 'Neurology',
                 education: 'MBBS',
                 yearsOfExperience: 3,
                 about: 'about doctor',
+                topDoctor: false,
                 fee: 60
             },
             {
-                _id: '0001',
+                _id: '0002',
                 image: doc  ,
                 name: 'Jennifer Williams',
                 speciality: 'Orthopedics',
                 education: 'MBBS',
                 yearsOfExperience: 3,
                 about: 'about doctor',
+                topDoctor: true,
                 fee: 60
             },
             {
-                _id: '0001',
+                _id: '0003',
                 image: doc  ,
                 name: 'Jennifer Williams',
-                speciality: 'Orthopedics',
+                speciality: 'Oral Health',
                 education: 'MBBS',
                 yearsOfExperience: 3,
                 about: 'about doctor',
+                topDoctor: false,
                 fee: 60
             },
             {
-                _id: '0001',
+                _id: '0004',
                 image: doc  ,
                 name: 'Jennifer Williams',
-                speciality: 'Orthopedics',
+                speciality: 'Oral Health',
                 education: 'MBBS',
                 yearsOfExperience: 3,
                 about: 'about doctor',
+                topDoctor: false,
                 fee: 60
             },
     
             {
-                _id: '0001',
+                _id: '0005',
                 image: doc  ,
                 name: 'Jennifer Williams',
                 speciality: 'Orthopedics',
                 education: 'MBBS',
                 yearsOfExperience: 3,
                 about: 'about doctor',
+                topDoctor: true,
                 fee: 60
             },
             {
-                _id: '0001',
+                _id: '0006',
                 image: doc  ,
                 name: 'Jennifer Williams',
                 speciality: 'Orthopedics',
                 education: 'MBBS',
                 yearsOfExperience: 3,
                 about: 'about doctor',
+                topDoctor: false,
                 fee: 60
             }
         ]

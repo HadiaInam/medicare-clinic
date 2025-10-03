@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { PiArrowCircleUpRightThin } from "react-icons/pi";
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
@@ -9,6 +9,12 @@ const Team = () => {
 
     const navigate = useNavigate()
     const {doctors} = useContext(AppContext)
+    const [filterDoctors, setFilterDoctors] = useState([])
+
+    useEffect(() => {
+        setFilterDoctors(doctors.filter(doc => doc.topDoctor == true))
+    }, [])
+
 
   return (
     <div className='justify-center items-center'>
@@ -19,7 +25,7 @@ const Team = () => {
 
         <div className="flex flex-wrap gap-4 justify-center items-center mt-10">
             {
-                doctors.slice(0,10).map( (item, index) => (
+                filterDoctors.slice(0,10).map( (item, index) => (
                     <div key={index} onClick={() => {navigate(`/appointment/:${item._id}`); scrollTo(0,0)}} className="rounded-2xl overflow-hidden relative shadow-md bg-blue-400/20 hover:translate-y-[-10px] transition-all duration-500 cursor-pointer">
                         <img src={item.image} className=' pt-5 px-9 mx-auto' alt="" />
                         <div className="bg-yellow-500 text-white rounded-sm text-center w-25 text-sm px-2 py-1 absolute top-2 right-2">Top Doctor</div>
