@@ -17,10 +17,7 @@ connectDB()
 connectCloudinary()
 
 app.use(express.json());
-app.use(cors({
-  origin: "*",
-  credentials: true,
-}));
+app.use(cors())
 
 app.use('/api/admin', adminRouter)
 app.use('/api/doctor', doctorRouter)
