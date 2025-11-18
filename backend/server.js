@@ -17,7 +17,21 @@ connectDB()
 connectCloudinary()
 
 app.use(express.json());
-app.use(cors())
+const corsOptions = {
+  origin: function (origin, callback) {
+    // allow requests with no origin (like Postman or server-to-server)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true); // origin allowed
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
+};
+
+app.use(cors(corsOptions));
 
 app.use('/api/admin', adminRouter)
 app.use('/api/doctor', doctorRouter)
